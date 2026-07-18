@@ -1,0 +1,187 @@
+<!-- ================================================================
+INTERACTIVE 1: CLICK-TO-REVEAL CARDS
+Paste this <section> inside <div class="slides"> in index.html.
+Make every id and data-reveal-target pair unique.
+================================================================ -->
+<section>
+  <h2>Replace with a Click-to-Reveal Title</h2>
+  <div class="reveal-grid">
+    <article class="reveal-item">
+      <h3>Replace Term One</h3>
+      <button class="interactive-button" type="button" data-reveal-target="reveal-topic-1" aria-expanded="false">Reveal details</button>
+      <p class="reveal-content" id="reveal-topic-1">Replace with hidden information.</p>
+    </article>
+
+    <article class="reveal-item">
+      <h3>Replace Term Two</h3>
+      <button class="interactive-button" type="button" data-reveal-target="reveal-topic-2" aria-expanded="false">Reveal details</button>
+      <p class="reveal-content" id="reveal-topic-2">Replace with hidden information.</p>
+    </article>
+
+    <article class="reveal-item">
+      <h3>Replace Term Three</h3>
+      <button class="interactive-button" type="button" data-reveal-target="reveal-topic-3" aria-expanded="false">Reveal details</button>
+      <p class="reveal-content" id="reveal-topic-3">Replace with hidden information.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ================================================================
+INTERACTIVE 2: TOPIC TABS
+Every data-tab-target value must match one panel id.
+================================================================ -->
+<section>
+  <h2>Replace with a Tabbed Topic Title</h2>
+  <div class="tab-set">
+    <div class="tab-controls" role="tablist" aria-label="Replace with a useful label">
+      <button class="tab-button is-active" type="button" data-tab-target="topic-tab-1" aria-selected="true">Overview</button>
+      <button class="tab-button" type="button" data-tab-target="topic-tab-2" aria-selected="false">Example</button>
+      <button class="tab-button" type="button" data-tab-target="topic-tab-3" aria-selected="false">Why It Matters</button>
+    </div>
+
+    <div class="tab-panel is-active" id="topic-tab-1">
+      <h3>Overview</h3>
+      <p>Replace this content.</p>
+    </div>
+
+    <div class="tab-panel" id="topic-tab-2">
+      <h3>Example</h3>
+      <p>Replace this content.</p>
+    </div>
+
+    <div class="tab-panel" id="topic-tab-3">
+      <h3>Why It Matters</h3>
+      <p>Replace this content.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+INTERACTIVE 3: STEP-THROUGH SEQUENCE
+Add or remove .stepper-panel elements as needed.
+================================================================ -->
+<section>
+  <h2>Replace with a Process or Timeline Title</h2>
+  <div class="stepper">
+    <div class="stepper-panel is-active">
+      <h3>Step 1</h3>
+      <p>Replace this content.</p>
+    </div>
+
+    <div class="stepper-panel">
+      <h3>Step 2</h3>
+      <p>Replace this content.</p>
+    </div>
+
+    <div class="stepper-panel">
+      <h3>Step 3</h3>
+      <p>Replace this content.</p>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="stepper-button" type="button" data-stepper-previous>Previous</button>
+      <span class="stepper-status" aria-live="polite">Step 1 of 3</span>
+      <button class="stepper-button" type="button" data-stepper-next>Next</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+INTERACTIVE 4: SORT CONTENT BETWEEN TWO CATEGORIES
+Students can click an item and then click a category, or drag items.
+Change data-correct-category so it matches the correct category id.
+================================================================ -->
+<section>
+  <h2>Replace with a Two-Category Sorting Title</h2>
+  <p class="interactive-instructions">
+    Select an item and then select a category, or drag each item into a category.
+  </p>
+
+  <div class="category-sort" data-category-sort>
+    <div class="sort-bank" data-sort-bank aria-label="Items waiting to be sorted">
+      <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="category-a">Replace Item 1</button>
+      <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="category-b">Replace Item 2</button>
+      <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="category-a">Replace Item 3</button>
+      <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="category-b">Replace Item 4</button>
+      <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="category-a">Replace Item 5</button>
+      <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="category-b">Replace Item 6</button>
+    </div>
+
+    <div class="sort-category-grid">
+      <article class="sort-category" data-sort-category="category-a" tabindex="0" role="button" aria-label="Move selected item to Category A">
+        <h3>Replace Category A</h3>
+        <div class="sort-drop-zone" data-category-drop="category-a"></div>
+      </article>
+
+      <article class="sort-category" data-sort-category="category-b" tabindex="0" role="button" aria-label="Move selected item to Category B">
+        <h3>Replace Category B</h3>
+        <div class="sort-drop-zone" data-category-drop="category-b"></div>
+      </article>
+    </div>
+
+    <div class="interactive-controls">
+      <button class="interactive-button" type="button" data-sort-check>Check Sorting</button>
+      <button class="interactive-button" type="button" data-sort-reset>Reset</button>
+      <p class="interactive-status" data-sort-status aria-live="polite">Sort every item, then check your work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+INTERACTIVE 5: PUT CONTENT OR STEPS IN THE CORRECT ORDER
+Set data-order="1", data-order="2", etc. to define the right order.
+The starter items are intentionally displayed out of order.
+================================================================ -->
+<section>
+  <h2>Replace with an Ordering Challenge Title</h2>
+  <p class="interactive-instructions">
+    Drag the items into order, or use the arrow buttons to move them.
+  </p>
+
+  <div class="sequence-sort" data-sequence-sort>
+    <ol class="order-list" data-order-list>
+      <li class="order-item" draggable="true" data-order="3">
+        <span class="order-handle" aria-hidden="true">↕</span>
+        <span class="order-text">Replace Step 3</span>
+        <span class="order-move-controls">
+          <button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button>
+          <button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button>
+        </span>
+      </li>
+
+      <li class="order-item" draggable="true" data-order="1">
+        <span class="order-handle" aria-hidden="true">↕</span>
+        <span class="order-text">Replace Step 1</span>
+        <span class="order-move-controls">
+          <button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button>
+          <button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button>
+        </span>
+      </li>
+
+      <li class="order-item" draggable="true" data-order="4">
+        <span class="order-handle" aria-hidden="true">↕</span>
+        <span class="order-text">Replace Step 4</span>
+        <span class="order-move-controls">
+          <button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button>
+          <button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button>
+        </span>
+      </li>
+
+      <li class="order-item" draggable="true" data-order="2">
+        <span class="order-handle" aria-hidden="true">↕</span>
+        <span class="order-text">Replace Step 2</span>
+        <span class="order-move-controls">
+          <button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button>
+          <button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button>
+        </span>
+      </li>
+    </ol>
+
+    <div class="interactive-controls">
+      <button class="interactive-button" type="button" data-order-check>Check Order</button>
+      <button class="interactive-button" type="button" data-order-reset>Reset</button>
+      <p class="interactive-status" data-order-status aria-live="polite">Arrange every item, then check your work.</p>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" role="img" aria-labelledby="title desc">
+  <title id="title">Colorful connected circles</title>
+  <desc id="desc">A teal, purple, yellow, and coral abstract technology mark.</desc>
+  <rect width="300" height="140" fill="none"/>
+  <path d="M42 70 H105 M135 70 H198 M228 70 H267" stroke="#918fbf" stroke-width="6" opacity=".8"/>
+  <circle cx="28" cy="70" r="18" fill="#1f1f1f" stroke="#3bcbaf" stroke-width="8"/>
+  <circle cx="120" cy="70" r="22" fill="#1f1f1f" stroke="#918fbf" stroke-width="9"/>
+  <circle cx="213" cy="70" r="25" fill="#1f1f1f" stroke="#f9cf8d" stroke-width="10"/>
+  <circle cx="280" cy="70" r="14" fill="#1f1f1f" stroke="#ee746c" stroke-width="7"/>
+  <circle cx="120" cy="70" r="6" fill="#3bcbaf"/>
+  <circle cx="213" cy="70" r="7" fill="#ee746c"/>
+</svg>

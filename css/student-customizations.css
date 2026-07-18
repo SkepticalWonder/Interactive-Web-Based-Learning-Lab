@@ -1,0 +1,655 @@
+/*
+======================================================================
+STUDENT CUSTOMIZATIONS
+All editable slideshow styling is in this one file.
+
+Default values below use a Bio::Neos-inspired style. Students can change
+these variables first before editing individual component rules.
+======================================================================
+*/
+
+:root {
+  /* Main Bio::Neos-style colors */
+  --student-background: #1f1f1f;
+  --student-text: #f7f7f7;
+  --student-primary: #3bcbaf;    /* teal */
+  --student-secondary: #918fbf;  /* purple */
+  --student-highlight: #f9cf8d;  /* yellow */
+  --student-warning: #ee746c;    /* red/coral */
+
+  /* Panel and line colors */
+  --student-panel: rgba(255, 255, 255, 0.065);
+  --student-line: rgba(255, 255, 255, 0.18);
+  --student-muted: rgba(255, 255, 255, 0.72);
+
+  /* Fonts: replace the first font name to change the look. */
+  --student-heading-font: "Pathway Gothic One", "League Gothic", Impact, sans-serif;
+  --student-body-font: "Source Sans Pro", Helvetica, Arial, sans-serif;
+
+  /* Major size controls */
+  --student-title-size: 5.5em;
+  --student-heading-size: 3em;
+  --student-subheading-size: 2em;
+  --student-body-size: 1.25em;
+
+  /* Card and button shapes */
+  --student-corner-radius: 0.35em;
+  --student-card-border-width: 5px;
+}
+
+/*
+======================================================================
+BIO::NEOS THEME VARIABLES
+The rest of the template uses these names. Change the student variables
+above and the whole theme updates.
+======================================================================
+*/
+
+:root {
+  --bioneos-teal: var(--student-primary);
+  --bioneos-purple: var(--student-secondary);
+  --bioneos-yellow: var(--student-highlight);
+  --bioneos-red: var(--student-warning);
+  --bioneos-dark: var(--student-background);
+  --bioneos-panel: var(--student-panel);
+  --bioneos-line: var(--student-line);
+  --bioneos-muted: var(--student-muted);
+}
+
+/*
+======================================================================
+BASE SLIDE THEME
+These are the Bio::Neos-inspired defaults for headings, text, cards,
+callouts, grids, links, and common slide helpers.
+======================================================================
+*/
+
+html, body { background: var(--student-background); }
+.reveal { font-family: var(--student-body-font); color: var(--student-text); }
+.reveal .slides { text-align: left; }
+.reveal .slides section { box-sizing: border-box; }
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--student-heading-font);
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 0.35em;
+}
+.reveal h1 { font-size: var(--student-title-size); }
+.reveal h2 { font-size: var(--student-heading-size); }
+.reveal h3 { font-size: var(--student-subheading-size); color: var(--bioneos-muted); }
+.reveal p, .reveal li { font-size: var(--student-body-size); line-height: 1.25; }
+.reveal strong { color: #fff; }
+.reveal small { color: var(--bioneos-muted); }
+.reveal a { color: var(--bioneos-teal); text-decoration: none; }
+.reveal a:hover { color: var(--bioneos-yellow); text-decoration: underline; }
+.reveal code { color: var(--bioneos-yellow); background: rgba(0,0,0,0.35); padding: 0.05em 0.2em; border-radius: 0.2em; }
+.reveal pre { box-shadow: none; width: 100%; margin: 0.5em 0; }
+.reveal pre code { padding: 1em; border-radius: 0.45em; max-height: none; }
+
+.b { color: var(--bioneos-teal) !important; }
+.p { color: var(--bioneos-purple) !important; }
+.y { color: var(--bioneos-yellow) !important; }
+.r { color: var(--bioneos-red) !important; }
+.dark { color: #3d4860 !important; }
+.bg { color: #2f2f2f !important; }
+.center { text-align: center !important; }
+.big { font-size: 1.25em; font-weight: 700; text-transform: uppercase; }
+.huge { font-size: 3em; }
+.introHeader { font-size: 1.15em; color: var(--bioneos-muted); }
+.logo { height: 100px; float: right; margin-top: 0.4em; }
+.bg-fade {
+  color: rgba(255,255,255,0.04);
+  position: absolute;
+  z-index: -1;
+  font-size: 9em;
+  right: -0.1em;
+  bottom: -0.2em;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--bioneos-line);
+  border-left: 6px solid var(--bioneos-teal);
+  padding: 0.25em 0.55em;
+  border-radius: 999px;
+  font-size: 0.42em;
+  color: var(--bioneos-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1em;
+}
+.callout {
+  border-left: 8px solid var(--bioneos-purple);
+  background: var(--bioneos-panel);
+  padding: 0.7em 0.9em;
+  margin: 0.6em 0 0.8em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55em;
+  margin-top: 0.5em;
+}
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card {
+  background: var(--bioneos-panel);
+  border: 1px solid var(--bioneos-line);
+  border-top: var(--student-card-border-width) solid var(--bioneos-teal);
+  border-radius: var(--student-corner-radius);
+  padding: 0.62em 0.72em;
+  min-height: 4.2em;
+}
+.card h3, .card h4 { margin: 0 0 1em; color: #fff; }
+.card p, .card li { color: var(--bioneos-muted); font-size: 1em; }
+.card.red { border-top-color: var(--bioneos-red); }
+.card.yellow { border-top-color: var(--bioneos-yellow); }
+.card.purple { border-top-color: var(--bioneos-purple); }
+.card.teal { border-top-color: var(--bioneos-teal); }
+.task-link {
+  display: inline-block;
+  margin: 0.28em 0.28em 0.28em 0;
+  padding: 0.48em 0.7em;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(0,0,0,0.15);
+}
+.task-link:after { content: " ↗"; font-weight: 900; }
+.checklist { list-style: none; margin-left: 0; }
+.checklist li { margin: 0.3em 0; padding-left: 1.4em; position: relative; }
+.checklist li:before { content: "□"; color: var(--bioneos-teal); position: absolute; left: 0; }
+.roadmap { counter-reset: step; list-style: none; margin-left: 0; }
+.roadmap li {
+  counter-increment: step;
+  margin: 0.38em 0;
+  padding-left: 2.2em;
+  position: relative;
+}
+.roadmap li:before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 1.45em;
+  height: 1.45em;
+  border-radius: 50%;
+  background: var(--bioneos-teal);
+  color: #111;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.45em;
+}
+.verify { border-left: 8px solid var(--bioneos-yellow); }
+.warning { border-left: 8px solid var(--bioneos-red); }
+.one-col {
+  display: grid;
+  grid-template-columns: 3fr;
+  align-items: start;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0.8em;
+  align-items: start;
+}
+.kbd {
+  display: inline-block;
+  border: 1px solid var(--bioneos-line);
+  border-bottom-width: 3px;
+  border-radius: 0.25em;
+  padding: 0.06em 0.35em;
+  font-size: 0.8em;
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.footer-note {
+  position: absolute;
+  bottom: 0.6em;
+  left: 0;
+  right: 0;
+  font-size: 0.36em;
+  color: rgba(255,255,255,0.45);
+}
+
+@media (max-width: 900px) {
+  .grid, .grid.three, .two-col { grid-template-columns: 1fr; }
+  .reveal h1 { font-size: 2.5em; }
+}
+
+.reveal .controls {
+  color: var(--bioneos-teal);
+}
+
+#overview-slide li {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+
+.img {
+height: 500px; 
+width: auto
+}
+
+/*
+======================================================================
+PROJECT COMPONENTS
+These styles support the quiz and the optional interactive slide snippets.
+======================================================================
+*/
+
+.reveal .project-mark {
+  display: block;
+  width: 260px;
+  max-height: 120px;
+  margin: 0.5em auto;
+}
+
+.reveal .project-subtitle {
+  max-width: 960px;
+  margin-inline: auto;
+  color: var(--bioneos-muted);
+}
+
+/* Quiz */
+.reveal .quiz-question h2 {
+  margin-bottom: 0.45em;
+}
+
+.reveal .answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45em;
+  margin-top: 0.55em;
+}
+
+.reveal .answer-button,
+.reveal .interactive-button,
+.reveal .tab-button,
+.reveal .stepper-button,
+.reveal .quiz-reset-button {
+  appearance: none;
+  border: 2px solid var(--bioneos-line);
+  border-left: 7px solid var(--student-primary);
+  border-radius: var(--student-corner-radius);
+  padding: 0.65em 0.8em;
+  background: rgba(255, 255, 255, 0.065);
+  color: var(--student-text);
+  font: inherit;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.reveal .answer-button:hover,
+.reveal .answer-button:focus-visible,
+.reveal .interactive-button:hover,
+.reveal .interactive-button:focus-visible,
+.reveal .tab-button:hover,
+.reveal .tab-button:focus-visible,
+.reveal .stepper-button:hover,
+.reveal .stepper-button:focus-visible,
+.reveal .quiz-reset-button:hover,
+.reveal .quiz-reset-button:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(59, 203, 175, 0.14);
+  border-color: var(--student-primary);
+  outline: none;
+}
+
+.reveal .answer-button[disabled] {
+  cursor: default;
+  transform: none;
+  opacity: 0.72;
+}
+
+.reveal .answer-button.correct-answer {
+  border-color: var(--student-primary);
+  background: rgba(59, 203, 175, 0.22);
+}
+
+.reveal .answer-button.incorrect-answer {
+  border-color: var(--student-warning);
+  background: rgba(238, 116, 108, 0.2);
+}
+
+.reveal .answer-feedback {
+  min-height: 1.7em;
+  margin-top: 0.5em;
+  padding: 0.4em 0.6em;
+  border-left: 7px solid transparent;
+  font-size: 0.72em;
+  color: var(--bioneos-muted);
+}
+
+.reveal .answer-feedback.correct-feedback {
+  border-left-color: var(--student-primary);
+}
+
+.reveal .answer-feedback.incorrect-feedback {
+  border-left-color: var(--student-warning);
+}
+
+.reveal .quiz-progress {
+  font-size: 0.6em;
+  color: var(--bioneos-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.reveal .quiz-results-number {
+  font-size: 3.5em;
+  line-height: 1;
+  color: var(--student-highlight);
+  font-weight: 900;
+}
+
+.reveal .quiz-reset-button {
+  display: inline-block;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+/* Interactive 1: click-to-reveal */
+.reveal .reveal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45em;
+}
+
+.reveal .reveal-item {
+  background: var(--bioneos-panel);
+  border: 1px solid var(--bioneos-line);
+  border-top: 5px solid var(--student-primary);
+  border-radius: var(--student-corner-radius);
+  padding: 0.55em;
+}
+
+.reveal .reveal-content {
+  display: none;
+  margin-top: 0.45em;
+  color: var(--bioneos-muted);
+  font-size: 0.75em;
+}
+
+.reveal .reveal-content.is-visible {
+  display: block;
+}
+
+/* Interactive 2: tabs */
+.reveal .tab-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.reveal .tab-button {
+  flex: 1 1 170px;
+  text-align: center;
+}
+
+.reveal .tab-button.is-active {
+  background: var(--student-primary);
+  color: #111;
+}
+
+.reveal .tab-panel {
+  display: none;
+  min-height: 5em;
+  padding: 0.7em;
+  background: var(--bioneos-panel);
+  border: 1px solid var(--bioneos-line);
+  border-left: 8px solid var(--student-secondary);
+}
+
+.reveal .tab-panel.is-active {
+  display: block;
+}
+
+/* Interactive 3: step-through sequence */
+.reveal .stepper-panel {
+  display: none;
+  min-height: 5em;
+  padding: 0.75em;
+  background: var(--bioneos-panel);
+  border: 1px solid var(--bioneos-line);
+  border-top: 6px solid var(--student-highlight);
+  border-radius: var(--student-corner-radius);
+}
+
+.reveal .stepper-panel.is-active {
+  display: block;
+}
+
+.reveal .stepper-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+.reveal .stepper-status {
+  align-self: center;
+  color: var(--bioneos-muted);
+  font-size: 0.65em;
+}
+
+.reveal .stepper-button {
+  text-align: center;
+}
+
+/* Small-screen adjustments */
+@media (max-width: 900px) {
+  .reveal .answer-grid,
+  .reveal .reveal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reveal .tab-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* INTERACTIVE 4: SORT BETWEEN TWO CATEGORIES */
+.reveal .interactive-instructions {
+  margin-bottom: 0.35em;
+  color: var(--bioneos-muted);
+  font-size: 0.78em;
+}
+
+.reveal .sort-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  min-height: 2.6em;
+  margin-bottom: 0.45em;
+  padding: 0.4em;
+  background: rgba(255, 255, 255, 0.035);
+  border: 2px dashed var(--bioneos-line);
+  border-radius: var(--student-corner-radius);
+}
+
+.reveal .sort-item {
+  flex: 1 1 200px;
+  text-align: center;
+  cursor: grab;
+}
+
+.reveal .sort-item:active {
+  cursor: grabbing;
+}
+
+.reveal .sort-item.is-selected {
+  background: rgba(249, 207, 141, 0.22);
+  border-color: var(--student-highlight);
+  outline: 3px solid var(--student-highlight);
+  outline-offset: 2px;
+}
+
+.reveal .sort-item.is-correct {
+  border-color: var(--student-primary);
+  background: rgba(59, 203, 175, 0.22);
+}
+
+.reveal .sort-item.is-incorrect {
+  border-color: var(--student-warning);
+  background: rgba(238, 116, 108, 0.2);
+}
+
+.reveal .sort-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45em;
+}
+
+.reveal .sort-category {
+  min-height: 5.6em;
+  padding: 0.45em;
+  background: var(--bioneos-panel);
+  border: 2px solid var(--bioneos-line);
+  border-top: 6px solid var(--student-secondary);
+  border-radius: var(--student-corner-radius);
+  cursor: pointer;
+}
+
+.reveal .sort-category:hover,
+.reveal .sort-category:focus-visible,
+.reveal .sort-category.is-drop-target {
+  border-color: var(--student-primary);
+  background: rgba(59, 203, 175, 0.08);
+  outline: none;
+}
+
+.reveal .sort-category h3 {
+  margin-bottom: 0.25em;
+}
+
+.reveal .sort-drop-zone {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.25em;
+  min-height: 3.1em;
+}
+
+.reveal .sort-drop-zone .sort-item {
+  flex: 1 1 160px;
+}
+
+/* INTERACTIVE 5: PUT ITEMS IN ORDER */
+.reveal .order-list {
+  display: grid;
+  gap: 0.28em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reveal .order-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.35em;
+  align-items: center;
+  margin: 0;
+  padding: 0.38em 0.45em;
+  background: var(--bioneos-panel);
+  border: 2px solid var(--bioneos-line);
+  border-left: 7px solid var(--student-highlight);
+  border-radius: var(--student-corner-radius);
+  cursor: grab;
+}
+
+.reveal .order-item:active,
+.reveal .order-item.is-dragging {
+  cursor: grabbing;
+}
+
+.reveal .order-item.is-dragging {
+  opacity: 0.42;
+}
+
+.reveal .order-item.is-correct {
+  border-color: var(--student-primary);
+  background: rgba(59, 203, 175, 0.18);
+}
+
+.reveal .order-item.is-incorrect {
+  border-color: var(--student-warning);
+  background: rgba(238, 116, 108, 0.14);
+}
+
+.reveal .order-handle {
+  color: var(--student-highlight);
+  font-size: 1.15em;
+  font-weight: 900;
+}
+
+.reveal .order-text {
+  font-size: 0.78em;
+  font-weight: 700;
+  text-align: left;
+}
+
+.reveal .order-move-controls {
+  display: flex;
+  gap: 0.18em;
+}
+
+.reveal .order-move-button {
+  min-width: 2.4em;
+  padding: 0.25em 0.42em;
+  border-left-width: 2px;
+  text-align: center;
+}
+
+.reveal .interactive-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: 0.45em;
+}
+
+.reveal .interactive-status {
+  flex: 1 1 300px;
+  margin: 0;
+  padding: 0.35em 0.5em;
+  color: var(--bioneos-muted);
+  font-size: 0.68em;
+  text-align: left;
+  border-left: 6px solid var(--bioneos-line);
+}
+
+.reveal .interactive-status.is-success {
+  color: var(--student-text);
+  border-left-color: var(--student-primary);
+}
+
+.reveal .interactive-status.is-warning {
+  color: var(--student-text);
+  border-left-color: var(--student-warning);
+}
+
+@media (max-width: 900px) {
+  .reveal .sort-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reveal .order-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .reveal .order-move-controls {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+}

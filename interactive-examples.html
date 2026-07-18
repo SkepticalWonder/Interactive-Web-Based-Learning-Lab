@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Interactive Slide Examples</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/student-customizations.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="center">
+          <h1>Interactive Slide Examples</h1>
+          <p>Use the arrow keys to view five working examples.</p>
+        </section>
+
+        <section>
+          <h2>Interactive 1: Click-to-Reveal Cards</h2>
+          <div class="reveal-grid">
+            <article class="reveal-item">
+              <h3>Term One</h3>
+              <button class="interactive-button" type="button" data-reveal-target="example-reveal-1" aria-expanded="false">Reveal details</button>
+              <p class="reveal-content" id="example-reveal-1">Replace this hidden content with a definition, clue, fact, image, or explanation.</p>
+            </article>
+            <article class="reveal-item">
+              <h3>Term Two</h3>
+              <button class="interactive-button" type="button" data-reveal-target="example-reveal-2" aria-expanded="false">Reveal details</button>
+              <p class="reveal-content" id="example-reveal-2">Each button points to a unique content id.</p>
+            </article>
+            <article class="reveal-item">
+              <h3>Term Three</h3>
+              <button class="interactive-button" type="button" data-reveal-target="example-reveal-3" aria-expanded="false">Reveal details</button>
+              <p class="reveal-content" id="example-reveal-3">Add or remove cards to fit your topic.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Interactive 2: Topic Tabs</h2>
+          <div class="tab-set">
+            <div class="tab-controls" role="tablist" aria-label="Example topic tabs">
+              <button class="tab-button is-active" type="button" data-tab-target="example-tab-1" aria-selected="true">Overview</button>
+              <button class="tab-button" type="button" data-tab-target="example-tab-2" aria-selected="false">Example</button>
+              <button class="tab-button" type="button" data-tab-target="example-tab-3" aria-selected="false">Why It Matters</button>
+            </div>
+            <div class="tab-panel is-active" id="example-tab-1"><h3>Overview</h3><p>Put the first section of your content here.</p></div>
+            <div class="tab-panel" id="example-tab-2"><h3>Example</h3><p>Put a concrete example, image, or case study here.</p></div>
+            <div class="tab-panel" id="example-tab-3"><h3>Why It Matters</h3><p>Explain the importance or real-world connection here.</p></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Interactive 3: Step-Through Sequence</h2>
+          <div class="stepper">
+            <div class="stepper-panel is-active"><h3>Step 1</h3><p>Explain the beginning of a process.</p></div>
+            <div class="stepper-panel"><h3>Step 2</h3><p>Explain what happens next.</p></div>
+            <div class="stepper-panel"><h3>Step 3</h3><p>Explain the final step or result.</p></div>
+            <div class="stepper-controls">
+              <button class="stepper-button" type="button" data-stepper-previous>Previous</button>
+              <span class="stepper-status" aria-live="polite">Step 1 of 3</span>
+              <button class="stepper-button" type="button" data-stepper-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+
+        <section>
+          <h2>Interactive 4: Sort Between Two Categories</h2>
+          <p class="interactive-instructions">Click an item and then click a category, or drag each item.</p>
+          <div class="category-sort" data-category-sort>
+            <div class="sort-bank" data-sort-bank aria-label="Items waiting to be sorted">
+              <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="living">Oak tree</button>
+              <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="nonliving">Rock</button>
+              <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="living">Mushroom</button>
+              <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="nonliving">Water</button>
+              <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="living">Capybara</button>
+              <button class="interactive-button sort-item" type="button" draggable="true" data-correct-category="nonliving">Sunlight</button>
+            </div>
+            <div class="sort-category-grid">
+              <article class="sort-category" data-sort-category="living" tabindex="0" role="button" aria-label="Move selected item to Living">
+                <h3>Living</h3>
+                <div class="sort-drop-zone" data-category-drop="living"></div>
+              </article>
+              <article class="sort-category" data-sort-category="nonliving" tabindex="0" role="button" aria-label="Move selected item to Nonliving">
+                <h3>Nonliving</h3>
+                <div class="sort-drop-zone" data-category-drop="nonliving"></div>
+              </article>
+            </div>
+            <div class="interactive-controls">
+              <button class="interactive-button" type="button" data-sort-check>Check Sorting</button>
+              <button class="interactive-button" type="button" data-sort-reset>Reset</button>
+              <p class="interactive-status" data-sort-status aria-live="polite">Sort every item, then check your work.</p>
+            </div>
+          </div>
+        </section>
+
+
+        <section>
+          <h2>Interactive 5: Put Steps in Order</h2>
+          <p class="interactive-instructions">Arrange the steps for publishing a simple webpage.</p>
+          <div class="sequence-sort" data-sequence-sort>
+            <ol class="order-list" data-order-list>
+              <li class="order-item" draggable="true" data-order="3">
+                <span class="order-handle" aria-hidden="true">↕</span><span class="order-text">Test the page in a browser.</span>
+                <span class="order-move-controls"><button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button><button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button></span>
+              </li>
+              <li class="order-item" draggable="true" data-order="1">
+                <span class="order-handle" aria-hidden="true">↕</span><span class="order-text">Plan the page content and structure.</span>
+                <span class="order-move-controls"><button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button><button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button></span>
+              </li>
+              <li class="order-item" draggable="true" data-order="4">
+                <span class="order-handle" aria-hidden="true">↕</span><span class="order-text">Publish or upload the finished files.</span>
+                <span class="order-move-controls"><button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button><button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button></span>
+              </li>
+              <li class="order-item" draggable="true" data-order="2">
+                <span class="order-handle" aria-hidden="true">↕</span><span class="order-text">Write and style the HTML and CSS.</span>
+                <span class="order-move-controls"><button class="interactive-button order-move-button" type="button" data-move-up aria-label="Move this item up">↑</button><button class="interactive-button order-move-button" type="button" data-move-down aria-label="Move this item down">↓</button></span>
+              </li>
+            </ol>
+            <div class="interactive-controls">
+              <button class="interactive-button" type="button" data-order-check>Check Order</button>
+              <button class="interactive-button" type="button" data-order-reset>Reset</button>
+              <p class="interactive-status" data-order-status aria-live="polite">Arrange every item, then check your work.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({ progress: true, history: true, slideNumber: true, transition: "slide" });
+    </script>
+    <script src="js/project.js"></script>
+  </body>
+</html>

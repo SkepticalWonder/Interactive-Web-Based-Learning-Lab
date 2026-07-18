@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Student-created Reveal.js quiz slideshow project">
+    <title>My Interactive Quiz Slideshow</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/student-customizations.css">
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <script>
+      const printStyle = document.createElement("link");
+      printStyle.rel = "stylesheet";
+      printStyle.type = "text/css";
+      printStyle.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.head.appendChild(printStyle);
+    </script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- TITLE SLIDE: Replace the visible placeholder text. -->
+        <section class="center">
+          <h1>Your Topic Title</h1>
+          <img class="project-mark" src="images/template-mark.svg" alt="Abstract connected circles">
+          <p class="project-subtitle">Replace this with your name, class, audience, and a one-sentence purpose.</p>
+        </section>
+
+        <!--
+          TEN BLANK CONTENT SLIDES
+          Keep at least ten teaching/content slides. Add headings, text, images,
+          diagrams, citations, and optional interactive components.
+        -->
+        <section>
+          <!-- CONTENT SLIDE 1: This has example content. -->
+            <h1>This is a header 1 text without formating</h1>
+          <p>This is paragraph text without any formating</p>
+          <ul>
+            <li>This is a bullet point list</li>
+            <li>The list can also be formated from this default</li>
+          </ul>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 2: This has example formted content. -->
+        <h1 class="b">This is a header 1 text with color formating</h1>
+          <p class="big">This is paragraph text with size formating</p>
+          <ul>
+            <li>This is a bullet point list</li>
+            <li>The list can also be formated</li>
+            <li>Even specific <span class="y">words</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 3: This has an example of image insertion with a caption. -->
+           <p>This has an example of image insertion with a caption.</p>
+           <figure>
+              <img class="img" src="images/capybara.png" alt="Capybara">
+              <figcaption>Source: Rainforest Alliance</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 4: Add your HTML content inside this section. -->
+           <h1>Slide 4</h1>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 5: Add your HTML content inside this section. -->
+           <h1>Slide 5</h1>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 6: Add your HTML content inside this section. -->
+           <h1>Slide 6</h1>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 7: Add your HTML content inside this section. -->
+           <h1>Slide 7</h1>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 8: Add your HTML content inside this section. -->
+           <h1>Slide 8</h1>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 9: Add your HTML content inside this section. -->
+           <h1>Slide 9</h1>
+        </section>
+
+        <section>
+          <!-- CONTENT SLIDE 10: Add your HTML content inside this section. -->
+           <h1>Slide 10</h1>
+        </section>
+
+        <!--
+          QUIZ VERTICAL STACK
+          The outer section creates one horizontal location.
+          The inner sections become vertical question slides.
+        -->
+        <section id="quiz">
+          <section
+            class="quiz-question"
+            data-question-number="1"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 1: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="2"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 2: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="3"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 3: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="4"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 4: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="5"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 5: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="6"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 6: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="7"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 7: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="8"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 8: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="9"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 9: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section
+            class="quiz-question"
+            data-question-number="10"
+            data-correct-feedback="Correct! Replace this with an explanation of why the answer is correct."
+            data-incorrect-feedback="Not quite. Replace this with a helpful hint or explanation."
+          >
+            <p class="quiz-progress" data-quiz-progress>Answered 0 of 10</p>
+            <h2>Filler Question 10: Replace this question with one about your topic.</h2>
+
+            <div class="answer-grid">
+              <button class="answer-button" type="button" data-correct="true">A. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">B. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">C. Replace this answer</button>
+              <button class="answer-button" type="button" data-correct="false">D. Replace this answer</button>
+            </div>
+
+            <p class="answer-feedback" aria-live="polite">Choose one answer.</p>
+          </section>
+
+          <section class="center">
+            <span class="tag">Quiz Results</span>
+            <h2>Your Score</h2>
+            <div class="quiz-results-number" id="quiz-score">0 / 10</div>
+            <p id="quiz-message">Complete every question to finish the quiz.</p>
+            <button class="quiz-reset-button" type="button">Reset Quiz</button>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        progress: true,
+        history: true,
+        slideNumber: true,
+        transition: "slide",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+    <script src="js/project.js"></script>
+  </body>
+</html>
